@@ -362,7 +362,7 @@ class App:
 
         fname = os.path.join(out_dir, f"{identifier}.csv")
 
-        with open(fname, "w") as fout:
+        with open(fname, "w", encoding="utf-8") as fout:
             writer = csv.DictWriter(fout, fieldnames=fieldnames, delimiter=delimiter)
             writer.writeheader()
             writer.writerows(csv_data)
